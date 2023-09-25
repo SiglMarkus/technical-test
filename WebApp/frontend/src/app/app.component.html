@@ -1,0 +1,28 @@
+<nb-layout>
+  <nb-layout-header fixed>
+    <div class="d-flex justify-content-between full-width">
+      <a class="logo" href="#">
+        <img [src]="logo">
+      </a>
+      <nb-form-field>
+        <nb-icon nbPrefix [icon]="themeFC.value === 'default' ? 'sun-outline' : 'moon-outline'" pack="eva"></nb-icon>
+        <nb-select [formControl]="themeFC">
+          <nb-option [value]="'default'">
+            <nb-icon icon="sun-outline" style="margin-right: 0.5rem;"></nb-icon>
+            Heller Modus
+          </nb-option>
+          <nb-option [value]="'dark'">
+            <nb-icon icon="moon-outline" style="margin-right: 0.5rem;"></nb-icon>
+            Dunkler Modus
+          </nb-option>
+        </nb-select>
+      </nb-form-field>
+    </div>
+  </nb-layout-header>
+
+  <nb-layout-column>
+
+    <router-outlet></router-outlet>
+
+  </nb-layout-column>
+</nb-layout>

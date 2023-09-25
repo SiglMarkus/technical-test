@@ -1,0 +1,25 @@
+## Docker Setup:
+For ease of running the web application you just have to:
+- install docker on your system (if windows --> Docker Desktop)
+- go to this directory in your powershell terminal
+- execute "docker compose build"
+- execute "docker compose up -d"
+
+the system is then up and running on "http://localhost:4200"
+
+
+If you'd like to run the web application yourself read on:
+
+
+## Manual Setup:
+Make sure you have Node and npm installed on your machine.
+
+Start Backend:
+Change into your backend folder in your terminal and execute following commands:
+"npm install"
+"npm run start:prod" for creating the Backendserver which manages all the Websocket Connections and relays the messages
+
+Start Frontend:
+Go into the frontend folder in your terminal and execute 
+"npm install"
+"npm start" for creating a development webserver which in turn hosts the angular app on "http://localhost:4200"

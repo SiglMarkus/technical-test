@@ -1,0 +1,3 @@
+If you want to set a custom address for your web application you currently need to modify 
+the "url" property in the "ViewModel/CommunicationViewModel.cs" file (Line 18) to your desired address (default is localhost).
+Then build and run in your preferred IDE.

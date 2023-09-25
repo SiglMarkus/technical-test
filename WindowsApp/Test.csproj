@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <RootNamespace>Training</RootNamespace>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="SocketIOClient" Version="3.1.1" />
+        <PackageReference Include="Websocket.Client.Channel" Version="3.3.0"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <None Remove="Assets\back-image.webp" />
+      <None Remove="Assets\logo.png" />
+      <Resource Include="Assets\logo.png" />
+      <None Remove="Assets\arrows.png" />
+      <None Remove="Assets\right-arrow.png" />
+    </ItemGroup>
+
+</Project>

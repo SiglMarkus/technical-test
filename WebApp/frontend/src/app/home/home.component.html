@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-between flex-wrap">
+  <div class="col-12 col-md-6 padding-10">
+    <nb-card>
+      <nb-card-header class="d-flex justify-content-between">
+        <div>Nachrichten senden</div>
+        <nb-icon icon="info-outline" status="info" nbTooltip="Nachrichten werden an alle verbundenen Windows Clients gesendet."></nb-icon>
+      </nb-card-header>
+      <nb-card-body>
+        <div>
+          <input nbInput [formControl]="inputFC" placeholder="Nachricht" status="basic" style="width: 500px; max-width: 100%;" (keydown.enter)="sendMsg(inputFC.value)">
+        </div>
+      </nb-card-body>
+      <nb-card-footer>
+        <button nbButton status="success" (click)="sendMsg(inputFC.value)" [disabled]="inputFC.value === '' || inputFC.value == null" nbTooltip="Geben Sie eine Nachricht ein bevor Sie auf Senden drücken" [nbTooltipTrigger]="inputFC.valid ? 'click' : 'hover'">
+          Senden
+        </button>
+      </nb-card-footer>
+    </nb-card>
+  </div>
+  <div class="col-12 col-md-6 padding-10">
+    <nb-card>
+      <nb-card-header class="d-flex justify-content-between">
+        <div>Verbundene Windows Clients</div>
+      </nb-card-header>
+      <nb-card-body>
+        <nb-list *ngFor="let client of clients">
+          <nb-list-item>
+            <div class="d-flex align-items-center">
+              <div>
+                <b>{{client.socketId}}</b>
+              </div>
+              <div>
+                <nb-icon icon="arrow-right-outline" status="success" style="font-size: 1.5rem;"></nb-icon>
+              </div>
+              <div>
+                {{ client.lastSentMessage }}
+              </div>
+            </div>
+          </nb-list-item>
+        </nb-list>
+        <div *ngIf="clients.length == 0">
+          <div class="d-flex justify-content-center">
+            <nb-icon icon="alert-circle-outline" status="info" style="font-size: 3rem;"></nb-icon>
+          </div>
+          <div class="d-flex justify-content-center">
+            <b>Keine Clients verbunden</b>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

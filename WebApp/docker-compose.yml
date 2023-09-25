@@ -1,0 +1,23 @@
+version: '3'
+services:
+  backend:
+    image: WebApp-backend
+    build:
+      context: ./backend   # Path to the directory containing the backend Dockerfile
+    container_name: backend
+    ports:
+      - target: 3000
+        published: 3000
+        mode: host
+
+
+
+  frontend:
+    image: WebApp-frontend
+    build:
+      context: ./frontend   # Path to the directory containing the frontend Dockerfile
+    container_name: frontend
+    ports:
+      - target: 80
+        published: 80
+        mode: host

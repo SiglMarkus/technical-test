@@ -1,0 +1,4 @@
+
+6csharpsquid:S2933"Make 'client' 'readonly'.(îàÊý
+Lcsharpsquid:S2933"*Make 'cancellationTokenSource' 'readonly'.(öˆ¬åþÿÿÿÿ
+mcsharpsquid:S3881	"KFix this implementation of 'IDisposable' to conform to the dispose pattern.(žäŸðþÿÿÿÿ
